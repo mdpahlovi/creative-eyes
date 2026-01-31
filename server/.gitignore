@@ -1,0 +1,5 @@
+# Dependencey
+/node_modules
+.env
+/data.json
+.vercel

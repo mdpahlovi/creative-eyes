@@ -1,0 +1,47 @@
+import { Card, CardHeader, CardBody, Avatar, CardFooter, Button } from "@material-tailwind/react";
+import { MdEditNote } from "react-icons/md";
+import { RiDeleteBin5Fill } from "react-icons/ri";
+import { useAuth } from "../../Hooks/useAuth";
+import NoPhoto from "../../Assets/icon/NoPhoto.png";
+import { Link } from "react-router-dom";
+
+const BlogCard = ({ blog, handleDelete, setBlogData }) => {
+    const { user } = useAuth();
+    const { _id, author, title, description, image } = blog;
+
+    return (
+        <Card className="overflow-hidden border hover:shadow-none transition">
+            <CardHeader floated={false} shadow={false} color="transparent" className="m-0 rounded-none aspect-video">
+                <img src={image} alt="" />
+            </CardHeader>
+            <CardBody>
+                <h5 className="mb-1 line-clamp-2">{title}</h5>
+                <p className="line-clamp-4">{description}</p>
+            </CardBody>
+            <CardFooter divider className="mt-auto flex items-center justify-between">
+                <div>
+                    <Avatar size="sm" variant="circular" alt="" src={author?.avatar ? author.avatar : NoPhoto} />
+                    <Button size="sm" variant="text" onClick={() => setBlogData(blog)}>
+                        See More
+                    </Button>
+                </div>
+                {(user?.isAdmin || user?._id === author?._id) && (
+                    <div className="flex gap-2.5">
+                        <Link to={`/edit-blog/${_id}`}>
+                            <button className="icon-button">
+                                <MdEditNote size={18} />
+                            </button>
+                        </Link>
+                        {user?.isAdmin && (
+                            <button onClick={() => handleDelete(_id)} className="icon-button">
+                                <RiDeleteBin5Fill />
+                            </button>
+                        )}
+                    </div>
+                )}
+            </CardFooter>
+        </Card>
+    );
+};
+
+export default BlogCard;
