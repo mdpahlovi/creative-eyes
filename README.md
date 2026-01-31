@@ -4,9 +4,7 @@ A full-stack photography service website where users can explore, book, and revi
 
 ## 🔗 Live Demo
 
-👉 [Visit Creative Eyes](https://creative-eyes-pg.web.app/)
-
----
+👉 [Visit Creative Eyes](https://creative-eyes.vercel.app/)
 
 ## 🛠️ Tech Stack
 
@@ -17,8 +15,6 @@ A full-stack photography service website where users can explore, book, and revi
 | **Database**       | MongoDB, Mongoose                                                   |
 | **Authentication** | Firebase                                                            |
 | **Hosting**        | Firebase Hosting                                                    |
-
----
 
 ## ✨ Features
 
