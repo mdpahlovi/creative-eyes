@@ -4,7 +4,7 @@ A full-stack photography service website where users can explore, book, and revi
 
 ## 🔗 Live Demo
 
-👉 [Visit Creative Eyes](https://creative-eyes.vercel.app/)
+👉 [Visit Creative Eyes](https://creative-eyes-pg.web.app/)
 
 ## 🛠️ Tech Stack
 

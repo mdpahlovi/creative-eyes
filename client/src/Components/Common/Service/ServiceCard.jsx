@@ -22,11 +22,14 @@ export default function ServiceCard({ service }) {
                             <TbCurrencyTaka className="-ml-1" />
                         </span>
                     </h5>
-                    <p className="line-clamp-4 text-justify">{details}</p>
+                    <p className="line-clamp-4">{details}</p>
                 </CardBody>
                 <CardFooter divider className="mt-auto flex items-center justify-between group-hover:text-blue-500 transition">
                     <span>Read more</span>
-                    <HiOutlineArrowRight size={20} className="-translate-x-4 text-2xl opacity-0 transition group-hover:translate-x-0 group-hover:opacity-100" />
+                    <HiOutlineArrowRight
+                        size={20}
+                        className="-translate-x-4 text-2xl opacity-0 transition group-hover:translate-x-0 group-hover:opacity-100"
+                    />
                 </CardFooter>
             </Card>
         </Link>
